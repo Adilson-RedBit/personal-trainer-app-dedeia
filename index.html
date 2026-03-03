@@ -410,6 +410,107 @@
 
   <script>
     const treinos = {
+      "treino_c": {
+        id: "treino_c",
+        nome: "Treino C",
+        descricao: "Glúteos/posterior",
+        status: "em-andamento",
+        data_inicio: "2026-02-09",
+        data_fim: "2026-04-17",
+        grupos_musculares: ["Glúteos", "Posterior"],
+        exercicios: [
+          {
+            id: 1,
+            nome: "Pré ativação ponte com elástico",
+            musculo: "Glúteos",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false },
+              { numero: 5, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Contrair 2s o glúteo em cima. Força no calcanhar. 2x10 cada lado",
+            video: "https://youtube.com/embed/-lAgQsOIiqU"
+          },
+          {
+            id: 2,
+            nome: "Elevação de quadril máquina",
+            musculo: "Glúteos",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 8, carga: null, completo: false },
+              { numero: 3, repeticoes: 8, carga: null, completo: false },
+              { numero: 4, repeticoes: 8, carga: null, completo: false }
+            ],
+            notas: "Força no calcanhar na subida. Contrair glúteo em cima.",
+            video: "https://youtube.com/embed/RwO5X1Z8Jq8"
+          },
+          {
+            id: 3,
+            nome: "Cadeira abdutora 45 graus",
+            musculo: "Glúteos",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Aumentando a carga a cada 10x",
+            video: "https://youtube.com/embed/PHnus1B-Z74"
+          },
+          {
+            id: 4,
+            nome: "Glúteos perna estendida no banco",
+            musculo: "Glúteos",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false },
+              { numero: 5, repeticoes: 10, carga: null, completo: false },
+              { numero: 6, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Faz um lado primeiro depois o outro (não trocar banco)",
+            video: "https://youtube.com/embed/BU_87JJzNA4"
+          },
+          {
+            id: 5,
+            nome: "Stiff com Halteres",
+            musculo: "Posterior",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Diminui repetição = aumenta carga",
+            video: "https://youtube.com/embed/BU_87JJzNA4"
+          },
+          {
+            id: 6,
+            nome: "Cadeira flexora com tronco a frente",
+            musculo: "Posterior",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Tronco inclinado para frente",
+            video: "https://youtube.com/embed/r_ehcfu0jZM"
+          },
+          {
+            id: 7,
+            nome: "Cadeira flexora unilateral",
+            musculo: "Posterior",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false }
+            ],
+            notas: "Começar pela perna mais fraca",
+            video: "https://youtube.com/embed/KVOqkJLPh3U"
+          }
+        ]
+      },
       "treino_b": {
         id: "treino_b",
         nome: "Treino B",
@@ -624,7 +725,7 @@
     }
 
     function proximoTreino() {
-      const ordem = ['treino_a', 'treino_b'];
+      const ordem = ['treino_a', 'treino_b', 'treino_c'];
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       
       for (let id of ordem) {
@@ -647,7 +748,7 @@
       const list = document.getElementById('treinos-list');
       list.innerHTML = '';
 
-      const ordem = ['treino_a', 'treino_b'];
+      const ordem = ['treino_a', 'treino_b', 'treino_c'];
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       const proximo = proximoTreino();
       
