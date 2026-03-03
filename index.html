@@ -410,6 +410,107 @@
 
   <script>
     const treinos = {
+      "treino_d": {
+        id: "treino_d",
+        nome: "Treino D",
+        descricao: "Costas/bíceps/pantu/abdome",
+        status: "em-andamento",
+        data_inicio: "2026-02-09",
+        data_fim: "2026-04-17",
+        grupos_musculares: ["Costas", "Bíceps", "Panturrilha", "Abdome"],
+        exercicios: [
+          {
+            id: 1,
+            nome: "Remada curvada pegada supinada na linear 45",
+            musculo: "Costas",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Diminui repetição = aumenta carga",
+            video: "https://youtube.com/embed/5w-VrSUAV84"
+          },
+          {
+            id: 2,
+            nome: "Puxada alta com pegada supinada",
+            musculo: "Costas",
+            series: [
+              { numero: 1, repeticoes: 15, carga: null, completo: false },
+              { numero: 2, repeticoes: 15, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Diminui repetição = aumenta carga",
+            video: "https://youtube.com/embed/1ldbOs8rpz8"
+          },
+          {
+            id: 3,
+            nome: "Puxada Alta na polia com banco",
+            musculo: "Costas",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Descansar 30s de um braço pro outro",
+            video: "https://youtube.com/embed/I5bxgMUXEGU"
+          },
+          {
+            id: 4,
+            nome: "Remada máquina pronada (cavalinho)",
+            musculo: "Costas",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 12, carga: null, completo: false },
+              { numero: 4, repeticoes: 12, carga: null, completo: false }
+            ],
+            notas: "Aumentar carga a cada série de 12 reps",
+            video: "https://youtube.com/embed/SqvqaHqFvHA"
+          },
+          {
+            id: 5,
+            nome: "Rosca barra W",
+            musculo: "Bíceps",
+            series: [
+              { numero: 1, repeticoes: 15, carga: null, completo: false },
+              { numero: 2, repeticoes: 15, carga: null, completo: false },
+              { numero: 3, repeticoes: 15, carga: null, completo: false }
+            ],
+            notas: "Aumentar carga a cada série",
+            video: "https://youtube.com/embed/fjS0CqDR4v8"
+          },
+          {
+            id: 6,
+            nome: "Panturrilha no leg horizontal",
+            musculo: "Panturrilha",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 12, carga: null, completo: false },
+              { numero: 4, repeticoes: 12, carga: null, completo: false },
+              { numero: 5, repeticoes: 12, carga: null, completo: false }
+            ],
+            notas: "Descanso de apenas 10s entre séries",
+            video: "https://youtube.com/embed/83e3vyu0_XE"
+          },
+          {
+            id: 7,
+            nome: "Abdome remador no banco",
+            musculo: "Abdome",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 12, carga: null, completo: false },
+              { numero: 4, repeticoes: 12, carga: null, completo: false }
+            ],
+            notas: "De preferência fazer no banco que é fixo (como supino)",
+            video: "https://youtube.com/embed/gyHIsdJbxtk"
+          }
+        ]
+      },
       "treino_c": {
         id: "treino_c",
         nome: "Treino C",
@@ -725,7 +826,7 @@
     }
 
     function proximoTreino() {
-      const ordem = ['treino_a', 'treino_b', 'treino_c'];
+      const ordem = ['treino_a', 'treino_b', 'treino_c', 'treino_d'];
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       
       for (let id of ordem) {
@@ -748,7 +849,7 @@
       const list = document.getElementById('treinos-list');
       list.innerHTML = '';
 
-      const ordem = ['treino_a', 'treino_b', 'treino_c'];
+      const ordem = ['treino_a', 'treino_b', 'treino_c', 'treino_d'];
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       const proximo = proximoTreino();
       

@@ -1,0 +1,109 @@
+{
+  "treino": {
+    "id": "treino_d",
+    "nome": "Treino D",
+    "descricao": "Costas/bíceps/pantu/abdome",
+    "data_inicio": "2026-02-09",
+    "data_fim": "2026-04-17",
+    "grupos_musculares": ["Costas", "Bíceps", "Panturrilha", "Abdome"],
+    "exercicios": [
+      {
+        "id": 1,
+        "nome": "Remada curvada pegada supinada na linear 45",
+        "musculo": "Costas",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
+          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Diminui repetição = aumenta carga",
+        "video": "https://youtube.com/embed/5w-VrSUAV84",
+        "status": "pendente"
+      },
+      {
+        "id": 2,
+        "nome": "Puxada alta com pegada supinada",
+        "musculo": "Costas",
+        "series": [
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
+          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Diminui repetição = aumenta carga",
+        "video": "https://youtube.com/embed/1ldbOs8rpz8",
+        "status": "pendente"
+      },
+      {
+        "id": 3,
+        "nome": "Puxada Alta na polia com banco",
+        "musculo": "Costas",
+        "series": [
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Braço forte" }
+        ],
+        "notas": "Descansar 30s de um braço pro outro",
+        "video": "https://youtube.com/embed/I5bxgMUXEGU",
+        "status": "pendente"
+      },
+      {
+        "id": 4,
+        "nome": "Remada máquina pronada (cavalinho)",
+        "musculo": "Costas",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Aumentar carga a cada série de 12 reps",
+        "video": "https://youtube.com/embed/SqvqaHqFvHA",
+        "status": "pendente"
+      },
+      {
+        "id": 5,
+        "nome": "Rosca barra W",
+        "musculo": "Bíceps",
+        "series": [
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Aumentar carga a cada série",
+        "video": "https://youtube.com/embed/fjS0CqDR4v8",
+        "status": "pendente"
+      },
+      {
+        "id": 6,
+        "nome": "Panturrilha no leg horizontal",
+        "musculo": "Panturrilha",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
+          { "numero": 5, "repeticoes": 12, "carga": null, "notas": "Última série" }
+        ],
+        "notas": "Descanso de apenas 10 segundos entre séries",
+        "video": "https://youtube.com/embed/83e3vyu0_XE",
+        "status": "pendente"
+      },
+      {
+        "id": 7,
+        "nome": "Abdome remador no banco",
+        "musculo": "Abdome",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "De preferência fazer no banco que é fixo (como supino)",
+        "video": "https://youtube.com/embed/gyHIsdJbxtk",
+        "status": "pendente"
+      }
+    ]
+  }
+}
