@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Meu Treino">
+  <meta name="theme-color" content="#8B0000">
+  <title>Meu Treino - Personal Trainer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #8B0000, #B22222);
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-icon {
+      font-size: 28px;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .welcome {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .welcome h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .welcome p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: all 0.3s;
+      border-left: 4px solid #8B0000;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .card-status {
+      background: #ddd;
+      color: #666;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .card-status.em-atual {
+      background: #B22222;
+      color: white;
+      animation: pulse 1.5s infinite;
+    }
+
+    .card-status.completo {
+      background: #4caf50;
+      color: white;
+    }
+
+    .card-muscles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .muscle-tag {
+      background: #f0f0f0;
+      color: #666;
+      padding: 4px 10px;
+      border-radius: 16px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .back-btn {
+      background: white;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #8B0000;
+      font-weight: 600;
+    }
+
+    .exercise-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-left: 4px solid #8B0000;
+    }
+
+    .exercise-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .exercise-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: #333;
+      flex: 1;
+    }
+
+    .exercise-muscle {
+      background: #E8E8E8;
+      color: #666;
+      padding: 4px 10px;
+      border-radius: 16px;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .exercise-video-btn {
+      background: #8B0000;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+
+    .exercise-video-btn:hover {
+      background: #B22222;
+    }
+
+    .series-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+
+    .series-table th {
+      background: #f9f9f9;
+      padding: 8px;
+      text-align: left;
+      font-weight: 600;
+      color: #666;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .series-table td {
+      padding: 8px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .series-num {
+      background: #8B0000;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-align: center;
+      min-width: 40px;
+      display: inline-block;
+    }
+
+    .series-input {
+      border: 1px solid #ddd;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      width: 70px;
+    }
+
+    .series-checkbox {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .exercise-notes {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+      border-left: 3px solid #8B0000;
+    }
+
+    .btn-primary {
+      background: #8B0000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .btn-primary:hover {
+      background: #B22222;
+    }
+
+    .btn-reiniciar {
+      background: white;
+      color: #8B0000;
+      border: 2px solid #8B0000;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-reiniciar:hover {
+      background: #fff5f5;
+    }
+
+    .dialog-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dialog-overlay.active {
+      display: flex;
+    }
+
+    .dialog {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .dialog h3 {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    .dialog iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .modal-close {
+      background: #8B0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 12px;
+      }
+
+      .dialog {
+        border-radius: 12px 12px 0 0;
+        margin-top: auto;
+        max-width: 100%;
+        max-height: 95vh;
+      }
+
+      .dialog iframe {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+      <span class="header-icon">💪</span>
+      Meu Treino
+    </h1>
+  </header>
+
+  <main>
+    <section id="home" class="section active">
+      <div class="welcome">
+        <h2>Andreia Souza</h2>
+        <p>Selecione seu treino</p>
+      </div>
+
+      <div id="treinos-list"></div>
+    </section>
+
+    <section id="treino-detail" class="section">
+      <button class="back-btn" onclick="voltar()">← Voltar</button>
+      <h2 id="treino-title" style="margin-bottom: 20px; color: #333;"></h2>
+      <div id="exercicios-list"></div>
+      <button class="btn-reiniciar" onclick="finalizarTreino()">✓ Finalizar Treino</button>
+    </section>
+  </main>
+
+  <div id="video-modal" class="dialog-overlay">
+    <div class="dialog">
+      <h3>Vídeo do Exercício</h3>
+      <div id="video-container"></div>
+      <button class="modal-close" onclick="fecharVideo()">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    const treinos = {
+      "treino_a": {
+        id: "treino_a",
+        nome: "Treino A",
+        descricao: "Quadríceps",
+        status: "em-andamento",
+        data_inicio: "2026-02-09",
+        data_fim: "2026-04-17",
+        grupos_musculares: ["Quadríceps"],
+        exercicios: [
+          {
+            id: 1,
+            nome: "Cadeira extensora pré ativação",
+            musculo: "Quadríceps",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Pré-ativação com carga média",
+            video: "https://youtube.com/embed/_ODbNIbo29M"
+          },
+          {
+            id: 2,
+            nome: "Agachamento no smith",
+            musculo: "Quadríceps",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "A cada 10x aumentar a carga",
+            video: "https://youtube.com/embed/cphLMoM24KQ"
+          },
+          {
+            id: 3,
+            nome: "Leg press 45",
+            musculo: "Quadríceps",
+            series: [
+              { numero: 1, repeticoes: 15, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 30, carga: "drop", completo: false },
+              { numero: 5, repeticoes: 30, carga: "drop", completo: false }
+            ],
+            notas: "Drop sets: diminuir carga a cada 10x até 30x total. Descanso 2min entre drops",
+            video: "https://youtube.com/embed/NY5fw4Zaofg"
+          },
+          {
+            id: 4,
+            nome: "Passada com barra nas costas",
+            musculo: "Quadríceps",
+            series: [
+              { numero: 1, repeticoes: 3, carga: null, completo: false },
+              { numero: 2, repeticoes: 3, carga: null, completo: false },
+              { numero: 3, repeticoes: 3, carga: null, completo: false },
+              { numero: 4, repeticoes: 3, carga: null, completo: false },
+              { numero: 5, repeticoes: 3, carga: null, completo: false },
+              { numero: 6, repeticoes: 3, carga: null, completo: false }
+            ],
+            notas: "3 idas e 3 voltas. CHAMAR O PROFESSOR PRA AJUDAR",
+            video: "https://youtube.com/embed/MBWi_4Y1Inw"
+          },
+          {
+            id: 5,
+            nome: "Cadeira extensora unilateral",
+            musculo: "Quadríceps",
+            series: [
+              { numero: 1, repeticoes: 15, carga: null, completo: false }
+            ],
+            notas: "Começar pela perna mais fraca",
+            video: "https://youtube.com/embed/OjlRBt6itcc"
+          },
+          {
+            id: 6,
+            nome: "Cadeira extensora drop set",
+            musculo: "Quadríceps",
+            series: [
+              { numero: 1, repeticoes: 30, carga: "25kg→20kg→15kg", completo: false },
+              { numero: 2, repeticoes: 30, carga: "25kg→20kg→15kg", completo: false }
+            ],
+            notas: "Drop set: 10x25kg + 10x20kg + 10x15kg sem descanso. Descanso 2min entre drops",
+            video: "https://youtube.com/embed/_ODbNIbo29M"
+          }
+        ]
+      }
+    };
+
+    function carregarDados() {
+      const ativoId = localStorage.getItem('treino_ativo');
+      if (!ativoId) {
+        localStorage.setItem('treino_ativo', 'treino_a');
+      }
+      
+      if (!localStorage.getItem('treinos_completados')) {
+        localStorage.setItem('treinos_completados', JSON.stringify([]));
+      }
+    }
+
+    function proximoTreino() {
+      const ordem = ['treino_a'];
+      const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
+      
+      for (let id of ordem) {
+        if (!completados.includes(id)) {
+          return id;
+        }
+      }
+      return null;
+    }
+
+    function marcarTreinoCompleto(id) {
+      const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
+      if (!completados.includes(id)) {
+        completados.push(id);
+      }
+      localStorage.setItem('treinos_completados', JSON.stringify(completados));
+    }
+
+    function renderHome() {
+      const list = document.getElementById('treinos-list');
+      list.innerHTML = '';
+
+      const ordem = ['treino_a'];
+      const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
+      const proximo = proximoTreino();
+      
+      ordem.forEach(id => {
+        const treino = treinos[id];
+        if (!treino) return;
+        
+        let statusText = 'Próximo';
+        let statusClass = 'proximo';
+        let clickable = true;
+        
+        if (completados.includes(id)) {
+          statusText = 'Completo';
+          statusClass = 'completo';
+          clickable = false;
+        } else if (id === proximo) {
+          statusText = 'Em Atual';
+          statusClass = 'em-atual';
+        }
+        
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.style.opacity = clickable ? '1' : '0.6';
+        card.innerHTML = `
+          <div class="card-header">
+            <div>
+              <div class="card-title">${treino.nome}</div>
+              <div style="font-size: 12px; color: #999; margin-top: 4px;">${treino.descricao}</div>
+            </div>
+            <span class="card-status ${statusClass}">${statusClass === 'completo' ? '✓' : '⏱️'} ${statusText}</span>
+          </div>
+          <div class="card-muscles">
+            ${treino.grupos_musculares.map(m => `<span class="muscle-tag">💪 ${m}</span>`).join('')}
+          </div>
+        `;
+        card.onclick = () => {
+          if (clickable) ativarTreino(id);
+        };
+        list.appendChild(card);
+      });
+    }
+
+    function ativarTreino(id) {
+      localStorage.setItem('treino_ativo', id);
+      renderHome();
+      verTreino(id);
+    }
+
+    function verTreino(treinoId) {
+      const treino = treinos[treinoId];
+      const titleEl = document.getElementById('treino-title');
+      titleEl.textContent = treino.nome;
+      titleEl.setAttribute('data-treino-id', treinoId);
+      renderExercicios(treino);
+
+      document.getElementById('home').classList.remove('active');
+      document.getElementById('treino-detail').classList.add('active');
+    }
+
+    function renderExercicios(treino) {
+      const list = document.getElementById('exercicios-list');
+      list.innerHTML = '';
+
+      treino.exercicios.forEach(ex => {
+        const card = document.createElement('div');
+        card.className = 'exercise-card';
+
+        const seriesHtml = ex.series.map(s => `
+          <tr>
+            <td><span class="series-num">${s.numero}ª</span></td>
+            <td>${s.repeticoes}x</td>
+            <td><input type="number" class="series-input" value="${s.carga || ''}" placeholder="carga" data-ex="${ex.id}" data-serie="${s.numero}"></td>
+            <td><input type="checkbox" class="series-checkbox" ${s.completo ? 'checked' : ''} data-ex="${ex.id}" data-serie="${s.numero}"></td>
+          </tr>
+        `).join('');
+
+        card.innerHTML = `
+          <div class="exercise-header">
+            <div class="exercise-name">${ex.nome}</div>
+            <span class="exercise-muscle">${ex.musculo}</span>
+          </div>
+
+          <button class="exercise-video-btn" onclick="abrirVideo('${ex.nome}', '${ex.video}')">
+            ▶ Assista
+          </button>
+
+          <table class="series-table">
+            <thead>
+              <tr>
+                <th>Série</th>
+                <th>Reps</th>
+                <th>Carga</th>
+                <th>✓</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${seriesHtml}
+            </tbody>
+          </table>
+
+          <div class="exercise-notes">
+            📝 ${ex.notas}
+          </div>
+        `;
+
+        list.appendChild(card);
+      });
+
+      document.querySelectorAll('.series-input').forEach(input => {
+        input.addEventListener('change', atualizarCarga);
+      });
+
+      document.querySelectorAll('.series-checkbox').forEach(cb => {
+        cb.addEventListener('change', marcarCompleto);
+      });
+    }
+
+    function atualizarCarga(e) {
+      const exId = parseInt(e.target.dataset.ex);
+      const serieNum = parseInt(e.target.dataset.serie);
+      const carga = e.target.value;
+
+      const treino = treinos.treino_a;
+      const ex = treino.exercicios.find(x => x.id === exId);
+      const serie = ex.series.find(s => s.numero === serieNum);
+      serie.carga = carga;
+    }
+
+    function marcarCompleto(e) {
+      const exId = parseInt(e.target.dataset.ex);
+      const serieNum = parseInt(e.target.dataset.serie);
+      const completo = e.target.checked;
+
+      const treino = treinos.treino_a;
+      const ex = treino.exercicios.find(x => x.id === exId);
+      const serie = ex.series.find(s => s.numero === serieNum);
+      serie.completo = completo;
+    }
+
+    function abrirVideo(nome, url) {
+      const container = document.getElementById('video-container');
+      container.innerHTML = `
+        <h4>${nome}</h4>
+        <iframe src="${url}" allowfullscreen></iframe>
+      `;
+      document.getElementById('video-modal').classList.add('active');
+    }
+
+    function fecharVideo() {
+      document.getElementById('video-modal').classList.remove('active');
+    }
+
+    function voltar() {
+      document.getElementById('treino-detail').classList.remove('active');
+      document.getElementById('home').classList.add('active');
+    }
+
+    function finalizarTreino() {
+      const treinoId = document.getElementById('treino-title').getAttribute('data-treino-id');
+      
+      marcarTreinoCompleto(treinoId);
+      
+      const proximo = proximoTreino();
+      if (proximo) {
+        alert('✓ Treino finalizado! Bom trabalho! 💪\n\nPróximo: ' + treinos[proximo].nome);
+        localStorage.setItem('treino_ativo', proximo);
+        renderHome();
+        verTreino(proximo);
+      } else {
+        alert('🏆 PARABÉNS! Você completou todos os treinos! 💪');
+        voltar();
+      }
+    }
+
+    carregarDados();
+    renderHome();
+  </script>
+
+</body>
+</html>
