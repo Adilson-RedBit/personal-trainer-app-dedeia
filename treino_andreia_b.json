@@ -1,0 +1,123 @@
+{
+  "treino": {
+    "id": "treino_b",
+    "nome": "Treino B",
+    "descricao": "Peito/ombro/tríceps/abdome",
+    "data_inicio": "2026-02-09",
+    "data_fim": "2026-04-17",
+    "grupos_musculares": ["Peito", "Ombro", "Tríceps", "Abdome"],
+    "exercicios": [
+      {
+        "id": 1,
+        "nome": "Supino deitado Articulado",
+        "musculo": "Peito",
+        "series": [
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Progredir carga" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Progredir carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Progredir carga" },
+          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Progredir carga" }
+        ],
+        "notas": "Progredindo carga a cada série",
+        "video": "https://youtube.com/embed/HNaDJTSrI8s",
+        "status": "pendente"
+      },
+      {
+        "id": 2,
+        "nome": "Desenvolvimento na Máquina",
+        "musculo": "Ombro",
+        "series": [
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 8, "carga": null, "notas": "Aumentar carga (reps diminui)" },
+          { "numero": 4, "repeticoes": 8, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Diminui repetição = aumenta carga. Não deixar o banco totalmente reto",
+        "video": "https://youtube.com/embed/VFbijwqdsTU",
+        "status": "pendente"
+      },
+      {
+        "id": 3,
+        "nome": "Elevação lateral sentado",
+        "musculo": "Ombro",
+        "series": [
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
+          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Não deixar o banco totalmente reto. Diminui repetição = aumenta carga",
+        "video": "https://youtube.com/embed/Lo2YOh-JVdU",
+        "status": "pendente"
+      },
+      {
+        "id": 4,
+        "nome": "Elevação lateral unilateral na polia baixa",
+        "musculo": "Ombro",
+        "series": [
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Braço fraco" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Braço fraco" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Braço forte" }
+        ],
+        "notas": "Começar pelo braço mais fraco",
+        "video": "https://youtube.com/embed/dgpts8LHOLc",
+        "status": "pendente"
+      },
+      {
+        "id": 5,
+        "nome": "Crucifixo invertido peck deck",
+        "musculo": "Ombro/Costas",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "Aumentar carga a cada série de 12 reps",
+        "video": "https://youtube.com/embed/Ck1zoqNh_io",
+        "status": "pendente"
+      },
+      {
+        "id": 6,
+        "nome": "Tríceps Corda na polia",
+        "musculo": "Tríceps",
+        "series": [
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Leve (aquecimento)" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "A cada 10x aumentar a carga",
+        "video": "https://youtube.com/embed/a4-Zi-_ClWU",
+        "status": "pendente"
+      },
+      {
+        "id": 7,
+        "nome": "Tríceps francês unilateral na polia",
+        "musculo": "Tríceps",
+        "series": [
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Braço forte + 30s descanso" },
+          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Braço forte" }
+        ],
+        "notas": "Descansar 30s de um braço pro outro. Começar pelo braço mais fraco",
+        "video": "https://youtube.com/embed/sL5LTV3gHMM",
+        "status": "pendente"
+      },
+      {
+        "id": 8,
+        "nome": "Abdome remador no banco",
+        "musculo": "Abdome",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+        ],
+        "notas": "De preferência fazer no banco que é fixo (como supino)",
+        "video": "https://youtube.com/embed/gyHIsdJbxtk",
+        "status": "pendente"
+      }
+    ]
+  }
+}

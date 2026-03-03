@@ -410,6 +410,120 @@
 
   <script>
     const treinos = {
+      "treino_b": {
+        id: "treino_b",
+        nome: "Treino B",
+        descricao: "Peito/ombro/tríceps/abdome",
+        status: "em-andamento",
+        data_inicio: "2026-02-09",
+        data_fim: "2026-04-17",
+        grupos_musculares: ["Peito", "Ombro", "Tríceps", "Abdome"],
+        exercicios: [
+          {
+            id: 1,
+            nome: "Supino deitado Articulado",
+            musculo: "Peito",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Progredindo carga a cada série",
+            video: "https://youtube.com/embed/HNaDJTSrI8s"
+          },
+          {
+            id: 2,
+            nome: "Desenvolvimento na Máquina",
+            musculo: "Ombro",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 8, carga: null, completo: false },
+              { numero: 4, repeticoes: 8, carga: null, completo: false }
+            ],
+            notas: "Diminui repetição = aumenta carga. Não deixar banco totalmente reto",
+            video: "https://youtube.com/embed/VFbijwqdsTU"
+          },
+          {
+            id: 3,
+            nome: "Elevação lateral sentado",
+            musculo: "Ombro",
+            series: [
+              { numero: 1, repeticoes: 15, carga: null, completo: false },
+              { numero: 2, repeticoes: 15, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Não deixar banco totalmente reto. Diminui repetição = aumenta carga",
+            video: "https://youtube.com/embed/Lo2YOh-JVdU"
+          },
+          {
+            id: 4,
+            nome: "Elevação lateral unilateral na polia baixa",
+            musculo: "Ombro",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Começar pelo braço mais fraco",
+            video: "https://youtube.com/embed/dgpts8LHOLc"
+          },
+          {
+            id: 5,
+            nome: "Crucifixo invertido peck deck",
+            musculo: "Ombro/Costas",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 12, carga: null, completo: false },
+              { numero: 4, repeticoes: 12, carga: null, completo: false }
+            ],
+            notas: "Aumentar carga a cada série de 12 reps",
+            video: "https://youtube.com/embed/Ck1zoqNh_io"
+          },
+          {
+            id: 6,
+            nome: "Tríceps Corda na polia",
+            musculo: "Tríceps",
+            series: [
+              { numero: 1, repeticoes: 15, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "A cada 10x aumentar a carga",
+            video: "https://youtube.com/embed/a4-Zi-_ClWU"
+          },
+          {
+            id: 7,
+            nome: "Tríceps francês unilateral na polia",
+            musculo: "Tríceps",
+            series: [
+              { numero: 1, repeticoes: 10, carga: null, completo: false },
+              { numero: 2, repeticoes: 10, carga: null, completo: false },
+              { numero: 3, repeticoes: 10, carga: null, completo: false },
+              { numero: 4, repeticoes: 10, carga: null, completo: false }
+            ],
+            notas: "Descansar 30s entre braços. Começar pelo braço mais fraco",
+            video: "https://youtube.com/embed/sL5LTV3gHMM"
+          },
+          {
+            id: 8,
+            nome: "Abdome remador no banco",
+            musculo: "Abdome",
+            series: [
+              { numero: 1, repeticoes: 12, carga: null, completo: false },
+              { numero: 2, repeticoes: 12, carga: null, completo: false },
+              { numero: 3, repeticoes: 12, carga: null, completo: false },
+              { numero: 4, repeticoes: 12, carga: null, completo: false }
+            ],
+            notas: "De preferência fazer no banco que é fixo (como supino)",
+            video: "https://youtube.com/embed/gyHIsdJbxtk"
+          }
+        ]
+      },
       "treino_a": {
         id: "treino_a",
         nome: "Treino A",
@@ -510,7 +624,7 @@
     }
 
     function proximoTreino() {
-      const ordem = ['treino_a'];
+      const ordem = ['treino_a', 'treino_b'];
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       
       for (let id of ordem) {
@@ -533,7 +647,7 @@
       const list = document.getElementById('treinos-list');
       list.innerHTML = '';
 
-      const ordem = ['treino_a'];
+      const ordem = ['treino_a', 'treino_b'];
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       const proximo = proximoTreino();
       
@@ -656,7 +770,8 @@
       const serieNum = parseInt(e.target.dataset.serie);
       const carga = e.target.value;
 
-      const treino = treinos.treino_a;
+      const treinoId = document.getElementById('treino-title').getAttribute('data-treino-id');
+      const treino = treinos[treinoId];
       const ex = treino.exercicios.find(x => x.id === exId);
       const serie = ex.series.find(s => s.numero === serieNum);
       serie.carga = carga;
@@ -667,7 +782,8 @@
       const serieNum = parseInt(e.target.dataset.serie);
       const completo = e.target.checked;
 
-      const treino = treinos.treino_a;
+      const treinoId = document.getElementById('treino-title').getAttribute('data-treino-id');
+      const treino = treinos[treinoId];
       const ex = treino.exercicios.find(x => x.id === exId);
       const serie = ex.series.find(s => s.numero === serieNum);
       serie.completo = completo;
