@@ -823,6 +823,11 @@
       if (!localStorage.getItem('treinos_completados')) {
         localStorage.setItem('treinos_completados', JSON.stringify([]));
       }
+      
+      // Carregar todos os treinos do localStorage
+      ['treino_a', 'treino_b', 'treino_c', 'treino_d'].forEach(id => {
+        carregarTreinoLocalStorage(id);
+      });
     }
 
     function proximoTreino() {
@@ -899,6 +904,9 @@
     }
 
     function verTreino(treinoId) {
+      // Carregar dados salvos do localStorage
+      carregarTreinoLocalStorage(treinoId);
+      
       const treino = treinos[treinoId];
       const titleEl = document.getElementById('treino-title');
       titleEl.textContent = treino.nome;
@@ -977,6 +985,22 @@
       const ex = treino.exercicios.find(x => x.id === exId);
       const serie = ex.series.find(s => s.numero === serieNum);
       serie.carga = carga;
+      
+      // Salvar no localStorage
+      salvarTreinoLocalStorage(treinoId);
+    }
+    
+    function salvarTreinoLocalStorage(treinoId) {
+      const treino = treinos[treinoId];
+      localStorage.setItem(`treino_${treinoId}`, JSON.stringify(treino));
+    }
+    
+    function carregarTreinoLocalStorage(treinoId) {
+      const dados = localStorage.getItem(`treino_${treinoId}`);
+      if (dados) {
+        const treinoSalvo = JSON.parse(dados);
+        treinos[treinoId] = treinoSalvo;
+      }
     }
 
     function marcarCompleto(e) {
@@ -989,6 +1013,9 @@
       const ex = treino.exercicios.find(x => x.id === exId);
       const serie = ex.series.find(s => s.numero === serieNum);
       serie.completo = completo;
+      
+      // Salvar no localStorage
+      salvarTreinoLocalStorage(treinoId);
     }
 
     function abrirVideo(nome, url) {
