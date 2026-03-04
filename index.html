@@ -1048,7 +1048,15 @@
         renderHome();
         verTreino(proximo);
       } else {
-        alert('🏆 PARABÉNS! Você completou todos os treinos! 💪');
+        // Completou todos os 4 treinos!
+        alert('🏆 PARABÉNS! Você completou todos os treinos! 💪\n\nCiclo reinicia agora....');
+        
+        // Resetar ciclo - limpar completados
+        localStorage.setItem('treinos_completados', JSON.stringify([]));
+        localStorage.setItem('treino_ativo', 'treino_a');
+        
+        // Voltar à home e mostrar Treino A como "Em Atual"
+        renderHome();
         voltar();
       }
     }
