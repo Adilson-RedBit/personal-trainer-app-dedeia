@@ -824,9 +824,12 @@
         localStorage.setItem('treinos_completados', JSON.stringify([]));
       }
       
-      // Carregar todos os treinos do localStorage
+      // Carregar dados salvos de TODOS os treinos
       ['treino_a', 'treino_b', 'treino_c', 'treino_d'].forEach(id => {
-        carregarTreinoLocalStorage(id);
+        const dados = localStorage.getItem(`treino_${id}_data`);
+        if (dados && treinos[id]) {
+          Object.assign(treinos[id], JSON.parse(dados));
+        }
       });
     }
 
@@ -992,14 +995,13 @@
     
     function salvarTreinoLocalStorage(treinoId) {
       const treino = treinos[treinoId];
-      localStorage.setItem(`treino_${treinoId}`, JSON.stringify(treino));
+      localStorage.setItem(`treino_${treinoId}_data`, JSON.stringify(treino));
     }
     
     function carregarTreinoLocalStorage(treinoId) {
-      const dados = localStorage.getItem(`treino_${treinoId}`);
-      if (dados) {
-        const treinoSalvo = JSON.parse(dados);
-        treinos[treinoId] = treinoSalvo;
+      const dados = localStorage.getItem(`treino_${treinoId}_data`);
+      if (dados && treinos[treinoId]) {
+        Object.assign(treinos[treinoId], JSON.parse(dados));
       }
     }
 
