@@ -385,7 +385,7 @@
   <main>
     <section id="home" class="section active">
       <div class="welcome">
-        <h2>Andreia Souza</h2>
+        <h2>Dedeia Souza</h2>
         <p>Selecione seu treino</p>
       </div>
 
@@ -409,410 +409,31 @@
   </div>
 
   <script>
-    const treinos = {
-      "treino_d": {
-        id: "treino_d",
-        nome: "Treino D",
-        descricao: "Costas/bíceps/pantu/abdome",
-        status: "em-andamento",
-        data_inicio: "2026-02-09",
-        data_fim: "2026-04-17",
-        grupos_musculares: ["Costas", "Bíceps", "Panturrilha", "Abdome"],
-        exercicios: [
-          {
-            id: 1,
-            nome: "Remada curvada pegada supinada na linear 45",
-            musculo: "Costas",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Diminui repetição = aumenta carga",
-            video: "https://youtube.com/embed/5w-VrSUAV84"
-          },
-          {
-            id: 2,
-            nome: "Puxada alta com pegada supinada",
-            musculo: "Costas",
-            series: [
-              { numero: 1, repeticoes: 15, carga: null, completo: false },
-              { numero: 2, repeticoes: 15, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Diminui repetição = aumenta carga",
-            video: "https://youtube.com/embed/1ldbOs8rpz8"
-          },
-          {
-            id: 3,
-            nome: "Puxada Alta na polia com banco",
-            musculo: "Costas",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Descansar 30s de um braço pro outro",
-            video: "https://youtube.com/embed/I5bxgMUXEGU"
-          },
-          {
-            id: 4,
-            nome: "Remada máquina pronada (cavalinho)",
-            musculo: "Costas",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 12, carga: null, completo: false },
-              { numero: 4, repeticoes: 12, carga: null, completo: false }
-            ],
-            notas: "Aumentar carga a cada série de 12 reps",
-            video: "https://youtube.com/embed/SqvqaHqFvHA"
-          },
-          {
-            id: 5,
-            nome: "Rosca barra W",
-            musculo: "Bíceps",
-            series: [
-              { numero: 1, repeticoes: 15, carga: null, completo: false },
-              { numero: 2, repeticoes: 15, carga: null, completo: false },
-              { numero: 3, repeticoes: 15, carga: null, completo: false }
-            ],
-            notas: "Aumentar carga a cada série",
-            video: "https://youtube.com/embed/fjS0CqDR4v8"
-          },
-          {
-            id: 6,
-            nome: "Panturrilha no leg horizontal",
-            musculo: "Panturrilha",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 12, carga: null, completo: false },
-              { numero: 4, repeticoes: 12, carga: null, completo: false },
-              { numero: 5, repeticoes: 12, carga: null, completo: false }
-            ],
-            notas: "Descanso de apenas 10s entre séries",
-            video: "https://youtube.com/embed/83e3vyu0_XE"
-          },
-          {
-            id: 7,
-            nome: "Abdome remador no banco",
-            musculo: "Abdome",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 12, carga: null, completo: false },
-              { numero: 4, repeticoes: 12, carga: null, completo: false }
-            ],
-            notas: "De preferência fazer no banco que é fixo (como supino)",
-            video: "https://youtube.com/embed/gyHIsdJbxtk"
+    let treinos = {};
+
+    async function carregarTreinos() {
+      try {
+        const ids = ['treino_andreia_a', 'treino_andreia_b', 'treino_andreia_c', 'treino_andreia_d'];
+        
+        for (let id of ids) {
+          const response = await fetch(`${id}.json`);
+          if (response.ok) {
+            const data = await response.json();
+            treinos[data.treino.id] = data.treino;
           }
-        ]
-      },
-      "treino_c": {
-        id: "treino_c",
-        nome: "Treino C",
-        descricao: "Glúteos/posterior",
-        status: "em-andamento",
-        data_inicio: "2026-02-09",
-        data_fim: "2026-04-17",
-        grupos_musculares: ["Glúteos", "Posterior"],
-        exercicios: [
-          {
-            id: 1,
-            nome: "Pré ativação ponte com elástico",
-            musculo: "Glúteos",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false },
-              { numero: 5, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Contrair 2s o glúteo em cima. Força no calcanhar. 2x10 cada lado",
-            video: "https://youtube.com/embed/-lAgQsOIiqU"
-          },
-          {
-            id: 2,
-            nome: "Elevação de quadril máquina",
-            musculo: "Glúteos",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 8, carga: null, completo: false },
-              { numero: 3, repeticoes: 8, carga: null, completo: false },
-              { numero: 4, repeticoes: 8, carga: null, completo: false }
-            ],
-            notas: "Força no calcanhar na subida. Contrair glúteo em cima.",
-            video: "https://youtube.com/embed/RwO5X1Z8Jq8"
-          },
-          {
-            id: 3,
-            nome: "Cadeira abdutora 45 graus",
-            musculo: "Glúteos",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Aumentando a carga a cada 10x",
-            video: "https://youtube.com/embed/PHnus1B-Z74"
-          },
-          {
-            id: 4,
-            nome: "Glúteos perna estendida no banco",
-            musculo: "Glúteos",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false },
-              { numero: 5, repeticoes: 10, carga: null, completo: false },
-              { numero: 6, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Faz um lado primeiro depois o outro (não trocar banco)",
-            video: "https://youtube.com/embed/BU_87JJzNA4"
-          },
-          {
-            id: 5,
-            nome: "Stiff com Halteres",
-            musculo: "Posterior",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Diminui repetição = aumenta carga",
-            video: "https://youtube.com/embed/BU_87JJzNA4"
-          },
-          {
-            id: 6,
-            nome: "Cadeira flexora com tronco a frente",
-            musculo: "Posterior",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Tronco inclinado para frente",
-            video: "https://youtube.com/embed/r_ehcfu0jZM"
-          },
-          {
-            id: 7,
-            nome: "Cadeira flexora unilateral",
-            musculo: "Posterior",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false }
-            ],
-            notas: "Começar pela perna mais fraca",
-            video: "https://youtube.com/embed/KVOqkJLPh3U"
-          }
-        ]
-      },
-      "treino_b": {
-        id: "treino_b",
-        nome: "Treino B",
-        descricao: "Peito/ombro/tríceps/abdome",
-        status: "em-andamento",
-        data_inicio: "2026-02-09",
-        data_fim: "2026-04-17",
-        grupos_musculares: ["Peito", "Ombro", "Tríceps", "Abdome"],
-        exercicios: [
-          {
-            id: 1,
-            nome: "Supino deitado Articulado",
-            musculo: "Peito",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Progredindo carga a cada série",
-            video: "https://youtube.com/embed/HNaDJTSrI8s"
-          },
-          {
-            id: 2,
-            nome: "Desenvolvimento na Máquina",
-            musculo: "Ombro",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 8, carga: null, completo: false },
-              { numero: 4, repeticoes: 8, carga: null, completo: false }
-            ],
-            notas: "Diminui repetição = aumenta carga. Não deixar banco totalmente reto",
-            video: "https://youtube.com/embed/VFbijwqdsTU"
-          },
-          {
-            id: 3,
-            nome: "Elevação lateral sentado",
-            musculo: "Ombro",
-            series: [
-              { numero: 1, repeticoes: 15, carga: null, completo: false },
-              { numero: 2, repeticoes: 15, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Não deixar banco totalmente reto. Diminui repetição = aumenta carga",
-            video: "https://youtube.com/embed/Lo2YOh-JVdU"
-          },
-          {
-            id: 4,
-            nome: "Elevação lateral unilateral na polia baixa",
-            musculo: "Ombro",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Começar pelo braço mais fraco",
-            video: "https://youtube.com/embed/dgpts8LHOLc"
-          },
-          {
-            id: 5,
-            nome: "Crucifixo invertido peck deck",
-            musculo: "Ombro/Costas",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 12, carga: null, completo: false },
-              { numero: 4, repeticoes: 12, carga: null, completo: false }
-            ],
-            notas: "Aumentar carga a cada série de 12 reps",
-            video: "https://youtube.com/embed/Ck1zoqNh_io"
-          },
-          {
-            id: 6,
-            nome: "Tríceps Corda na polia",
-            musculo: "Tríceps",
-            series: [
-              { numero: 1, repeticoes: 15, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "A cada 10x aumentar a carga",
-            video: "https://youtube.com/embed/a4-Zi-_ClWU"
-          },
-          {
-            id: 7,
-            nome: "Tríceps francês unilateral na polia",
-            musculo: "Tríceps",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Descansar 30s entre braços. Começar pelo braço mais fraco",
-            video: "https://youtube.com/embed/sL5LTV3gHMM"
-          },
-          {
-            id: 8,
-            nome: "Abdome remador no banco",
-            musculo: "Abdome",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 12, carga: null, completo: false },
-              { numero: 3, repeticoes: 12, carga: null, completo: false },
-              { numero: 4, repeticoes: 12, carga: null, completo: false }
-            ],
-            notas: "De preferência fazer no banco que é fixo (como supino)",
-            video: "https://youtube.com/embed/gyHIsdJbxtk"
-          }
-        ]
-      },
-      "treino_a": {
-        id: "treino_a",
-        nome: "Treino A",
-        descricao: "Quadríceps",
-        status: "em-andamento",
-        data_inicio: "2026-02-09",
-        data_fim: "2026-04-17",
-        grupos_musculares: ["Quadríceps"],
-        exercicios: [
-          {
-            id: 1,
-            nome: "Cadeira extensora pré ativação",
-            musculo: "Quadríceps",
-            series: [
-              { numero: 1, repeticoes: 10, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "Pré-ativação com carga média",
-            video: "https://youtube.com/embed/_ODbNIbo29M"
-          },
-          {
-            id: 2,
-            nome: "Agachamento no smith",
-            musculo: "Quadríceps",
-            series: [
-              { numero: 1, repeticoes: 12, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 10, carga: null, completo: false }
-            ],
-            notas: "A cada 10x aumentar a carga",
-            video: "https://youtube.com/embed/cphLMoM24KQ"
-          },
-          {
-            id: 3,
-            nome: "Leg press 45",
-            musculo: "Quadríceps",
-            series: [
-              { numero: 1, repeticoes: 15, carga: null, completo: false },
-              { numero: 2, repeticoes: 10, carga: null, completo: false },
-              { numero: 3, repeticoes: 10, carga: null, completo: false },
-              { numero: 4, repeticoes: 30, carga: "drop", completo: false },
-              { numero: 5, repeticoes: 30, carga: "drop", completo: false }
-            ],
-            notas: "Drop sets: diminuir carga a cada 10x até 30x total. Descanso 2min entre drops",
-            video: "https://youtube.com/embed/NY5fw4Zaofg"
-          },
-          {
-            id: 4,
-            nome: "Passada com barra nas costas",
-            musculo: "Quadríceps",
-            series: [
-              { numero: 1, repeticoes: 3, carga: null, completo: false },
-              { numero: 2, repeticoes: 3, carga: null, completo: false },
-              { numero: 3, repeticoes: 3, carga: null, completo: false },
-              { numero: 4, repeticoes: 3, carga: null, completo: false },
-              { numero: 5, repeticoes: 3, carga: null, completo: false },
-              { numero: 6, repeticoes: 3, carga: null, completo: false }
-            ],
-            notas: "3 idas e 3 voltas. CHAMAR O PROFESSOR PRA AJUDAR",
-            video: "https://youtube.com/embed/MBWi_4Y1Inw"
-          },
-          {
-            id: 5,
-            nome: "Cadeira extensora unilateral",
-            musculo: "Quadríceps",
-            series: [
-              { numero: 1, repeticoes: 15, carga: null, completo: false }
-            ],
-            notas: "Começar pela perna mais fraca",
-            video: "https://youtube.com/embed/OjlRBt6itcc"
-          },
-          {
-            id: 6,
-            nome: "Cadeira extensora drop set",
-            musculo: "Quadríceps",
-            series: [
-              { numero: 1, repeticoes: 30, carga: "25kg→20kg→15kg", completo: false },
-              { numero: 2, repeticoes: 30, carga: "25kg→20kg→15kg", completo: false }
-            ],
-            notas: "Drop set: 10x25kg + 10x20kg + 10x15kg sem descanso. Descanso 2min entre drops",
-            video: "https://youtube.com/embed/_ODbNIbo29M"
-          }
-        ]
+        }
+
+        if (Object.keys(treinos).length === 0) {
+          console.error('Nenhum treino foi carregado!');
+          return;
+        }
+
+        carregarDados();
+        renderHome();
+      } catch (error) {
+        console.error('Erro ao carregar treinos:', error);
       }
-    };
+    }
 
     function carregarDados() {
       const ativoId = localStorage.getItem('treino_ativo');
@@ -825,7 +446,7 @@
       }
       
       // Carregar dados salvos de TODOS os treinos
-      ['treino_a', 'treino_b', 'treino_c', 'treino_d'].forEach(id => {
+      Object.keys(treinos).forEach(id => {
         const dados = localStorage.getItem(`treino_${id}_data`);
         if (dados && treinos[id]) {
           Object.assign(treinos[id], JSON.parse(dados));
@@ -834,7 +455,7 @@
     }
 
     function proximoTreino() {
-      const ordem = ['treino_a', 'treino_b', 'treino_c', 'treino_d'];
+      const ordem = Object.keys(treinos);
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       
       for (let id of ordem) {
@@ -857,7 +478,7 @@
       const list = document.getElementById('treinos-list');
       list.innerHTML = '';
 
-      const ordem = ['treino_a', 'treino_b', 'treino_c', 'treino_d'];
+      const ordem = Object.keys(treinos);
       const completados = JSON.parse(localStorage.getItem('treinos_completados') || '[]');
       const proximo = proximoTreino();
       
@@ -907,7 +528,6 @@
     }
 
     function verTreino(treinoId) {
-      // Carregar dados salvos do localStorage
       carregarTreinoLocalStorage(treinoId);
       
       const treino = treinos[treinoId];
@@ -933,7 +553,7 @@
             <td><span class="series-num">${s.numero}ª</span></td>
             <td>${s.repeticoes}x</td>
             <td><input type="number" class="series-input" value="${s.carga || ''}" placeholder="carga" data-ex="${ex.id}" data-serie="${s.numero}"></td>
-            <td><input type="checkbox" class="series-checkbox" ${s.completo ? 'checked' : ''} data-ex="${ex.id}" data-serie="${s.numero}"></td>
+            <td><input type="checkbox" class="series-checkbox" ${s.status === 'completo' ? 'checked' : ''} data-ex="${ex.id}" data-serie="${s.numero}"></td>
           </tr>
         `).join('');
 
@@ -989,7 +609,6 @@
       const serie = ex.series.find(s => s.numero === serieNum);
       serie.carga = carga;
       
-      // Salvar no localStorage
       salvarTreinoLocalStorage(treinoId);
     }
     
@@ -1014,9 +633,8 @@
       const treino = treinos[treinoId];
       const ex = treino.exercicios.find(x => x.id === exId);
       const serie = ex.series.find(s => s.numero === serieNum);
-      serie.completo = completo;
+      serie.status = completo ? 'completo' : 'pendente';
       
-      // Salvar no localStorage
       salvarTreinoLocalStorage(treinoId);
     }
 
@@ -1050,21 +668,17 @@
         renderHome();
         verTreino(proximo);
       } else {
-        // Completou todos os 4 treinos!
         alert('🏆 PARABÉNS! Você completou todos os treinos! 💪\n\nCiclo reinicia agora....');
         
-        // Resetar ciclo - limpar completados
         localStorage.setItem('treinos_completados', JSON.stringify([]));
-        localStorage.setItem('treino_ativo', 'treino_a');
+        localStorage.setItem('treino_ativo', Object.keys(treinos)[0]);
         
-        // Voltar à home e mostrar Treino A como "Em Atual"
         renderHome();
         voltar();
       }
     }
 
-    carregarDados();
-    renderHome();
+    carregarTreinos();
   </script>
 
 </body>
