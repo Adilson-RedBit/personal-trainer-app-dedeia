@@ -2,106 +2,92 @@
   "treino": {
     "id": "treino_d",
     "nome": "Treino D",
-    "descricao": "Costas/bíceps/pantu/abdome",
-    "data_inicio": "2026-02-09",
-    "data_fim": "2026-04-17",
-    "grupos_musculares": ["Costas", "Bíceps", "Panturrilha", "Abdome"],
+    "descricao": "Superiores 2/Abdome",
+    "data_inicio": "2026-06-15",
+    "data_fim": "2026-08-21",
+    "grupos_musculares": ["Superiores", "Abdome"],
     "exercicios": [
       {
         "id": 1,
-        "nome": "Remada curvada pegada supinada na linear 45",
+        "nome": "Puxador triângulo",
         "musculo": "Costas",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
           { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
         ],
-        "notas": "Diminui repetição = aumenta carga",
-        "video": "https://youtube.com/embed/5w-VrSUAV84",
+        "notas": "1x12/3x10",
+        "video": "https://youtube.com/embed/ySLFHxmJ_Sc",
         "status": "pendente"
       },
       {
         "id": 2,
-        "nome": "Puxada alta com pegada supinada",
+        "nome": "Remada baixa unilateral na polia com banco pegada neutra",
         "musculo": "Costas",
         "series": [
-          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Braço fraco primeiro - Descansar 30 segundos" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Braço forte - Descansar 30 segundos" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Braço fraco - Descansar 30 segundos" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Braço forte - Descansar 30 segundos" },
+          { "numero": 5, "repeticoes": 12, "carga": null, "notas": "Braço fraco - Descansar 30 segundos" },
+          { "numero": 6, "repeticoes": 12, "carga": null, "notas": "Braço forte" }
         ],
-        "notas": "Diminui repetição = aumenta carga",
-        "video": "https://youtube.com/embed/1ldbOs8rpz8",
+        "notas": "3x12 - Começar pelo braço mais fraco, descansar 30 segundos de um braço pro outro",
+        "video": "https://youtube.com/embed/1kl-ojWZef4",
         "status": "pendente"
       },
       {
         "id": 3,
-        "nome": "Puxada Alta na polia com banco",
+        "nome": "Remada baixa pegada aberta",
         "musculo": "Costas",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Braço forte" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "" }
         ],
-        "notas": "Descansar 30s de um braço pro outro",
-        "video": "https://youtube.com/embed/I5bxgMUXEGU",
+        "notas": "3x12",
+        "video": "https://youtube.com/embed/UoiSR8X3qio",
         "status": "pendente"
       },
       {
         "id": 4,
-        "nome": "Remada máquina pronada (cavalinho)",
-        "musculo": "Costas",
+        "nome": "Crucifixo invertido peck deck",
+        "musculo": "Ombro",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 15, "carga": null, "notas": "" }
         ],
-        "notas": "Aumentar carga a cada série de 12 reps",
-        "video": "https://youtube.com/embed/SqvqaHqFvHA",
+        "notas": "3x15",
+        "video": "https://youtube.com/embed/Ck1zoqNh_io",
         "status": "pendente"
       },
       {
         "id": 5,
-        "nome": "Rosca barra W",
+        "nome": "Rosca martelo sentado",
         "musculo": "Bíceps",
         "series": [
-          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "" }
         ],
-        "notas": "Aumentar carga a cada série",
-        "video": "https://youtube.com/embed/fjS0CqDR4v8",
+        "notas": "4x12",
+        "video": "https://youtube.com/embed/33wZzZ_siuw",
         "status": "pendente"
       },
       {
         "id": 6,
-        "nome": "Panturrilha no leg horizontal",
-        "musculo": "Panturrilha",
-        "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
-          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
-          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Descanso 10s" },
-          { "numero": 5, "repeticoes": 12, "carga": null, "notas": "Última série" }
-        ],
-        "notas": "Descanso de apenas 10 segundos entre séries",
-        "video": "https://youtube.com/embed/83e3vyu0_XE",
-        "status": "pendente"
-      },
-      {
-        "id": 7,
-        "nome": "Abdome remador no banco",
+        "nome": "Prancha isométrica",
         "musculo": "Abdome",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": null, "carga": null, "notas": "30 segundos" },
+          { "numero": 2, "repeticoes": null, "carga": null, "notas": "30 segundos" },
+          { "numero": 3, "repeticoes": null, "carga": null, "notas": "1 minuto" }
         ],
-        "notas": "De preferência fazer no banco que é fixo (como supino)",
-        "video": "https://youtube.com/embed/gyHIsdJbxtk",
+        "notas": "2x30 segundos + 1x1 minuto",
+        "video": "https://youtube.com/embed/uxPlAbWFUDs",
         "status": "pendente"
       }
     ]

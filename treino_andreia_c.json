@@ -2,106 +2,99 @@
   "treino": {
     "id": "treino_c",
     "nome": "Treino C",
-    "descricao": "Glúteos/posterior",
-    "data_inicio": "2026-02-09",
-    "data_fim": "2026-04-17",
-    "grupos_musculares": ["Glúteos", "Posterior"],
+    "descricao": "Inferiores 2",
+    "data_inicio": "2026-06-15",
+    "data_fim": "2026-08-21",
+    "grupos_musculares": ["Inferiores"],
     "exercicios": [
       {
         "id": 1,
-        "nome": "Pré ativação ponte com elástico",
+        "nome": "Abdução ostra com elástico",
         "musculo": "Glúteos",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Pré ativação" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Pré ativação" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Pré ativação" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Lado esquerdo" },
-          { "numero": 5, "repeticoes": 10, "carga": null, "notas": "Lado direito" }
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Lado esquerdo - Segurar 2 segundos no pico" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Lado direito - Segurar 2 segundos no pico" }
         ],
-        "notas": "Contrair 2s o glúteo em cima. Força no calcanhar pra subir. 2x10 cada lado",
-        "video": "https://youtube.com/embed/-lAgQsOIiqU",
+        "notas": "2x10 cada lado - Segurar 2 segundos no pico",
+        "video": "https://youtube.com/embed/NykPOcQj6bA",
         "status": "pendente"
       },
       {
         "id": 2,
-        "nome": "Elevação de quadril máquina",
+        "nome": "Levantamento terra sumô",
         "musculo": "Glúteos",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Leve (aquecimento)" },
-          { "numero": 2, "repeticoes": 8, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 8, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 8, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Contrair o glúteo em cima" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Contrair o glúteo em cima" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Contrair o glúteo em cima" }
         ],
-        "notas": "Força no calcanhar na subida. Contrair glúteo em cima. Calcanhar abaixo da linha do joelho",
-        "video": "https://youtube.com/embed/RwO5X1Z8Jq8",
+        "notas": "3x10 - Contrair o glúteo em cima",
+        "video": "https://youtube.com/embed/fKLv8owDNsw",
         "status": "pendente"
       },
       {
         "id": 3,
-        "nome": "Cadeira abdutora 45 graus",
-        "musculo": "Glúteos",
+        "nome": "Agachamento Smith",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Descer até o talo" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Descer até o talo" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Descer até o talo" }
         ],
-        "notas": "Aumentando a carga a cada 10x",
-        "video": "https://youtube.com/embed/PHnus1B-Z74",
+        "notas": "3x10 - Até o talo",
+        "video": "https://youtube.com/embed/1oipoiTpbJA",
         "status": "pendente"
       },
       {
         "id": 4,
-        "nome": "Glúteos perna estendida no banco",
+        "nome": "Glúteos na polia média",
         "musculo": "Glúteos",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Lado esquerdo" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Lado esquerdo" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Lado esquerdo" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Lado direito" },
-          { "numero": 5, "repeticoes": 10, "carga": null, "notas": "Lado direito" },
-          { "numero": 6, "repeticoes": 10, "carga": null, "notas": "Lado direito" }
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 15, "carga": null, "notas": "" }
         ],
-        "notas": "Faz um lado primeiro depois o outro (não trocar banco de lado)",
-        "video": "https://youtube.com/embed/BU_87JJzNA4",
+        "notas": "3x15",
+        "video": "https://youtube.com/embed/1ltlotoc6uE",
         "status": "pendente"
       },
       {
         "id": 5,
-        "nome": "Stiff com Halteres",
+        "nome": "Stiff na máquina de sumo",
         "musculo": "Posterior",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Descer empurrando o quadril pra trás, descer lento" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Descer empurrando o quadril pra trás, descer lento" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Descer empurrando o quadril pra trás, descer lento" }
         ],
-        "notas": "Diminui repetição = aumenta carga",
-        "video": "https://youtube.com/embed/BU_87JJzNA4",
+        "notas": "3x10 - Descer empurrando o quadril pra trás, descer lento não despencar",
+        "video": "https://youtube.com/embed/Slbi8DB7aVo",
         "status": "pendente"
       },
       {
         "id": 6,
-        "nome": "Cadeira flexora com tronco a frente",
+        "nome": "Cadeira flexora",
         "musculo": "Posterior",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Pico de contração 2 segundos embaixo, retorno lento" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Pico de contração 2 segundos embaixo, retorno lento" }
         ],
-        "notas": "Tronco inclinado para frente",
-        "video": "https://youtube.com/embed/r_ehcfu0jZM",
+        "notas": "2x12 - Pico de contração 2 segundos embaixo, retorno lento",
+        "video": "https://youtube.com/embed/T46yKiz8laY",
         "status": "pendente"
       },
       {
         "id": 7,
-        "nome": "Cadeira flexora unilateral",
-        "musculo": "Posterior",
+        "nome": "Panturrilha em pé na máquina",
+        "musculo": "Panturrilha",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Perna fraca" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Perna fraca" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "" }
         ],
-        "notas": "Começar pela perna mais fraca",
-        "video": "https://youtube.com/embed/KVOqkJLPh3U",
+        "notas": "4x12",
+        "video": "https://youtube.com/embed/o1CyKLbUPAM",
         "status": "pendente"
       }
     ]

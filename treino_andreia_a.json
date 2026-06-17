@@ -2,90 +2,113 @@
   "treino": {
     "id": "treino_a",
     "nome": "Treino A",
-    "descricao": "Quadríceps",
-    "data_inicio": "2026-02-09",
-    "data_fim": "2026-04-17",
-    "grupos_musculares": ["Quadríceps"],
+    "descricao": "Inferiores 1/Abdome",
+    "data_inicio": "2026-06-15",
+    "data_fim": "2026-08-21",
+    "grupos_musculares": ["Inferiores", "Abdome"],
     "exercicios": [
       {
         "id": 1,
-        "nome": "Cadeira extensora pré ativação",
-        "musculo": "Quadríceps",
+        "nome": "Deslocamento com mini band",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Carga média" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Carga média" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Carga média" }
+          { "numero": 1, "repeticoes": null, "carga": null, "notas": "Ida" },
+          { "numero": 2, "repeticoes": null, "carga": null, "notas": "Volta" },
+          { "numero": 3, "repeticoes": null, "carga": null, "notas": "Ida" },
+          { "numero": 4, "repeticoes": null, "carga": null, "notas": "Volta" }
         ],
-        "notas": "Pré-ativação com carga média",
-        "video": "https://youtube.com/embed/_ODbNIbo29M",
+        "notas": "2 idas e 2 voltas",
+        "video": "https://youtube.com/embed/dDBMLwYot8w",
         "status": "pendente"
       },
       {
         "id": 2,
-        "nome": "Agachamento no smith",
-        "musculo": "Quadríceps",
+        "nome": "Abdução na polia",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Leve (aquecimento)" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "" }
         ],
-        "notas": "A cada 10x aumentar a carga",
-        "video": "https://youtube.com/embed/cphLMoM24KQ",
+        "notas": "2x15",
+        "video": "https://youtube.com/embed/7MBj2pE4mCI",
         "status": "pendente"
       },
       {
         "id": 3,
-        "nome": "Leg press 45",
-        "musculo": "Quadríceps",
+        "nome": "Elevação de pelve máquina",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Leve" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 30, "carga": null, "notas": "DROP SET 1: 10x + 10x + 10x (diminuir sem descanso)" },
-          { "numero": 5, "repeticoes": 30, "carga": null, "notas": "DROP SET 2: 10x + 10x + 10x (diminuir sem descanso)" }
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Descer em 3 segundos, segurar 2 segundos no topo contraindo" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Descer em 3 segundos, segurar 2 segundos no topo contraindo" },
+          { "numero": 3, "repeticoes": 8, "carga": null, "notas": "Aumentar carga - Descer em 3 segundos, segurar 2 segundos no topo contraindo" },
+          { "numero": 4, "repeticoes": 8, "carga": null, "notas": "Aumentar carga - Descer em 3 segundos, segurar 2 segundos no topo contraindo" }
         ],
-        "notas": "Drop sets: a cada 10x diminuir carga até completar 30x. Descanse 2min entre drops",
-        "video": "https://youtube.com/embed/NY5fw4Zaofg",
+        "notas": "2x10/2x8 - Diminui a repetição aumenta a carga",
+        "video": "https://youtube.com/embed/vL9YwqM6EUw",
         "status": "pendente"
       },
       {
         "id": 4,
-        "nome": "Passada com barra nas costas",
-        "musculo": "Quadríceps",
+        "nome": "Leg press 45",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 3, "carga": null, "notas": "Ida" },
-          { "numero": 2, "repeticoes": 3, "carga": null, "notas": "Volta" },
-          { "numero": 3, "repeticoes": 3, "carga": null, "notas": "Ida" },
-          { "numero": 4, "repeticoes": 3, "carga": null, "notas": "Volta" },
-          { "numero": 5, "repeticoes": 3, "carga": null, "notas": "Ida" },
-          { "numero": 6, "repeticoes": 3, "carga": null, "notas": "Volta" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Descer até o talo" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Descer até o talo" },
+          { "numero": 3, "repeticoes": 8, "carga": null, "notas": "Aumentar carga - Descer até o talo" },
+          { "numero": 4, "repeticoes": 8, "carga": null, "notas": "Aumentar carga - Descer até o talo" }
         ],
-        "notas": "3 idas e 3 voltas. CHAMAR O PROFESSOR PRA AJUDAR",
-        "video": "https://youtube.com/embed/MBWi_4Y1Inw",
+        "notas": "2x12/2x8 - Descer até o talo",
+        "video": "https://youtube.com/embed/NY5fw4Zaofg",
         "status": "pendente"
       },
       {
         "id": 5,
-        "nome": "Cadeira extensora unilateral",
-        "musculo": "Quadríceps",
+        "nome": "Avanço alternado com halteres",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Perna fraca" }
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "" }
         ],
-        "notas": "Começar pela perna mais fraca",
-        "video": "https://youtube.com/embed/OjlRBt6itcc",
+        "notas": "2x15",
+        "video": "https://youtube.com/embed/l19WoBrlzVA",
         "status": "pendente"
       },
       {
         "id": 6,
-        "nome": "Cadeira extensora drop set",
-        "musculo": "Quadríceps",
+        "nome": "Cadeira extensora unilateral",
+        "musculo": "Inferiores",
         "series": [
-          { "numero": 1, "repeticoes": 30, "carga": "25kg→20kg→15kg", "notas": "DROP 1: 10x25kg + 10x20kg + 10x15kg (sem descanso)" },
-          { "numero": 2, "repeticoes": 30, "carga": "25kg→20kg→15kg", "notas": "DROP 2: 10x25kg + 10x20kg + 10x15kg (descansar 2min após)" }
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Começar pela perna mais fraca" }
         ],
-        "notas": "Drop set avançado: começa pesado, diminui a cada 10x sem descanso até 30x total. Descanso de 2min entre drops",
-        "video": "https://youtube.com/embed/_ODbNIbo29M",
+        "notas": "1x15 - Começar pela perna mais fraca",
+        "video": "https://youtube.com/embed/OjlRBt6itcc",
+        "status": "pendente"
+      },
+      {
+        "id": 7,
+        "nome": "Cadeira extensora",
+        "musculo": "Inferiores",
+        "series": [
+          { "numero": 1, "repeticoes": 15, "carga": "Média", "notas": "" },
+          { "numero": 2, "repeticoes": 15, "carga": "Média", "notas": "" },
+          { "numero": 3, "repeticoes": 10, "carga": "Alta", "notas": "Série válida" },
+          { "numero": 4, "repeticoes": 10, "carga": "Alta", "notas": "Série válida" }
+        ],
+        "notas": "2x15 carga média + 2x10 carga alta - Séries válidas",
+        "video": "https://youtube.com/embed/PzIfB9MiiX8",
+        "status": "pendente"
+      },
+      {
+        "id": 8,
+        "nome": "Elevação de pernas",
+        "musculo": "Abdome",
+        "series": [
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "" }
+        ],
+        "notas": "3x12",
+        "video": "https://youtube.com/embed/In0EzoOAILw",
         "status": "pendente"
       }
     ]

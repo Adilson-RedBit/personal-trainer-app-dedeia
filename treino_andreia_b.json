@@ -2,120 +2,104 @@
   "treino": {
     "id": "treino_b",
     "nome": "Treino B",
-    "descricao": "Peito/ombro/tríceps/abdome",
-    "data_inicio": "2026-02-09",
-    "data_fim": "2026-04-17",
-    "grupos_musculares": ["Peito", "Ombro", "Tríceps", "Abdome"],
+    "descricao": "Superiores 1/Abdome",
+    "data_inicio": "2026-06-15",
+    "data_fim": "2026-08-21",
+    "grupos_musculares": ["Superiores", "Abdome"],
     "exercicios": [
       {
         "id": 1,
-        "nome": "Supino deitado Articulado",
+        "nome": "Peck deck",
         "musculo": "Peito",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Progredir carga" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Progredir carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Progredir carga" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Progredir carga" }
+          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
         ],
-        "notas": "Progredindo carga a cada série",
-        "video": "https://youtube.com/embed/HNaDJTSrI8s",
+        "notas": "2x15/2x12 - Diminui a repetição aumenta a carga",
+        "video": "https://youtube.com/embed/MENdoLpyj7c",
         "status": "pendente"
       },
       {
         "id": 2,
-        "nome": "Desenvolvimento na Máquina",
+        "nome": "Elevação frontal alternado",
         "musculo": "Ombro",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 8, "carga": null, "notas": "Aumentar carga (reps diminui)" },
-          { "numero": 4, "repeticoes": 8, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "" }
         ],
-        "notas": "Diminui repetição = aumenta carga. Não deixar o banco totalmente reto",
-        "video": "https://youtube.com/embed/VFbijwqdsTU",
+        "notas": "3x12",
+        "video": "https://youtube.com/embed/xvT2oA9Bwsc",
         "status": "pendente"
       },
       {
         "id": 3,
-        "nome": "Elevação lateral sentado",
+        "nome": "Elevação lateral unilateral no banco inclinado",
         "musculo": "Ombro",
         "series": [
-          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 15, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga (reps diminui)" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Braço esquerdo - Descansar 30 segundos" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Braço direito - Descansar 30 segundos" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Braço esquerdo - Descansar 30 segundos" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Braço direito - Descansar 30 segundos" },
+          { "numero": 5, "repeticoes": 12, "carga": null, "notas": "Braço esquerdo - Descansar 30 segundos" },
+          { "numero": 6, "repeticoes": 12, "carga": null, "notas": "Braço direito" }
         ],
-        "notas": "Não deixar o banco totalmente reto. Diminui repetição = aumenta carga",
-        "video": "https://youtube.com/embed/Lo2YOh-JVdU",
+        "notas": "3x12 - Descansar 30 segundos de um braço pro outro",
+        "video": "https://youtube.com/embed/Wc8jfCb6OqI",
         "status": "pendente"
       },
       {
         "id": 4,
-        "nome": "Elevação lateral unilateral na polia baixa",
-        "musculo": "Ombro",
+        "nome": "Face pull",
+        "musculo": "Costas",
         "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Braço fraco" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Braço fraco" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Braço forte" }
+          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
+          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
         ],
-        "notas": "Começar pelo braço mais fraco",
-        "video": "https://youtube.com/embed/dgpts8LHOLc",
+        "notas": "3x10 - Diminui a repetição aumenta a carga",
+        "video": "https://youtube.com/embed/lbt7obncwVs",
         "status": "pendente"
       },
       {
         "id": 5,
-        "nome": "Crucifixo invertido peck deck",
-        "musculo": "Ombro/Costas",
+        "nome": "Tríceps barra V",
+        "musculo": "Tríceps",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 15, "carga": "Leve", "notas": "Aquecimento" },
+          { "numero": 2, "repeticoes": 30, "carga": "20kg→15kg→10kg", "notas": "DROP SET 1: 10x20kg + 10x15kg + 10x10kg (sem descanso)" },
+          { "numero": 3, "repeticoes": 30, "carga": "20kg→15kg→10kg", "notas": "DROP SET 2: 10x20kg + 10x15kg + 10x10kg (descansar após)" }
         ],
-        "notas": "Aumentar carga a cada série de 12 reps",
-        "video": "https://youtube.com/embed/Ck1zoqNh_io",
+        "notas": "1x15 leve + 2x30 drop set - Diminui o peso a cada 10 repetições",
+        "video": "https://youtube.com/embed/hAbGZYaOji8",
         "status": "pendente"
       },
       {
         "id": 6,
-        "nome": "Tríceps Corda na polia",
+        "nome": "Tríceps francês com halter sentado",
         "musculo": "Tríceps",
         "series": [
-          { "numero": 1, "repeticoes": 15, "carga": null, "notas": "Leve (aquecimento)" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "" },
+          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "" }
         ],
-        "notas": "A cada 10x aumentar a carga",
-        "video": "https://youtube.com/embed/a4-Zi-_ClWU",
+        "notas": "4x12",
+        "video": "https://youtube.com/embed/_dtPoiFWZT4",
         "status": "pendente"
       },
       {
         "id": 7,
-        "nome": "Tríceps francês unilateral na polia",
-        "musculo": "Tríceps",
-        "series": [
-          { "numero": 1, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
-          { "numero": 2, "repeticoes": 10, "carga": null, "notas": "Braço fraco + 30s descanso" },
-          { "numero": 3, "repeticoes": 10, "carga": null, "notas": "Braço forte + 30s descanso" },
-          { "numero": 4, "repeticoes": 10, "carga": null, "notas": "Braço forte" }
-        ],
-        "notas": "Descansar 30s de um braço pro outro. Começar pelo braço mais fraco",
-        "video": "https://youtube.com/embed/sL5LTV3gHMM",
-        "status": "pendente"
-      },
-      {
-        "id": 8,
-        "nome": "Abdome remador no banco",
+        "nome": "Prancha lateral",
         "musculo": "Abdome",
         "series": [
-          { "numero": 1, "repeticoes": 12, "carga": null, "notas": "Iniciar" },
-          { "numero": 2, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 3, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" },
-          { "numero": 4, "repeticoes": 12, "carga": null, "notas": "Aumentar carga" }
+          { "numero": 1, "repeticoes": null, "carga": null, "notas": "Lado esquerdo - 30 segundos" },
+          { "numero": 2, "repeticoes": null, "carga": null, "notas": "Lado direito - 30 segundos" }
         ],
-        "notas": "De preferência fazer no banco que é fixo (como supino)",
-        "video": "https://youtube.com/embed/gyHIsdJbxtk",
+        "notas": "2x30 segundos cada lado - Quadril alto não deixar cair, tronco alinhado",
+        "video": "https://youtube.com/embed/lpWyu0jI9AU",
         "status": "pendente"
       }
     ]
